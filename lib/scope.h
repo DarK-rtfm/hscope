@@ -1,0 +1,1 @@
+char* getscope(char* type);
