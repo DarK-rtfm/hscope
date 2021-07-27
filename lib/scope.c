@@ -25,7 +25,7 @@ char* getscope(char* type) {
     if (response->code < 400) {
         parsed = parse(response->data->data);
     } else {
-        fprintf(stderr, "Code %ld received from site", response->code);
+        fprintf(stderr, "Code %ld received from site\n", response->code);
     }
     free(timestr);
     cleanup(response);

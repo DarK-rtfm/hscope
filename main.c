@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
         notify_init("HSCOPE");
         n = notify_notification_new (scope, NULL, NULL);
         if (!notify_notification_show (n, NULL)) {
-			fprintf(stderr, "Failed to send notification.");
+			fprintf(stderr, "Failed to send notification.\n");
 			return 1;
 		}
     } else {

@@ -43,7 +43,7 @@ Response* getsite(char* type, char* time) {
 
         curl_easy_cleanup(curl);
     } else {
-        fprintf(stderr, "Could not init curl"); 
+        fprintf(stderr, "Could not init curl\n"); 
         free(response_buff);
         return NULL;
     }
