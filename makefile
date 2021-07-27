@@ -11,7 +11,7 @@ clean:
 install:
 	$(CC) -o hscope main.c lib/response.c lib/parse.c lib/scope.c $(LINKS) $(HEADERS)
 	cp ./hscope ~/.local/bin/hscope
-	rm ~/.local/bin/hscopen
+	-rm ~/.local/bin/hscopen
 	ln -s ~/.local/bin/hscope ~/.local/bin/hscopen
 
 uninstall:
