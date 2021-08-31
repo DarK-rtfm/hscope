@@ -15,5 +15,5 @@ install:
 	ln -s ~/.local/bin/hscope ~/.local/bin/hscopen
 
 uninstall:
-	rm ~/.local/bin/hscope
-	rm ~/.local/bin/hscopen
+	-rm ~/.local/bin/hscope
+	-rm ~/.local/bin/hscopen
