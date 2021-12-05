@@ -17,11 +17,11 @@ char* getscope(char* type) {
     time(&rawtime);
     timeinfo = localtime(&rawtime);
     char* timestr;
-    asprintf(&timestr, "%d-%s-%d", timeinfo->tm_year + 1900, months[timeinfo->tm_mon], timeinfo->tm_mday);
+    asprintf(&timestr, "%d-%s-%02d", timeinfo->tm_year + 1900, months[timeinfo->tm_mon], timeinfo->tm_mday);
 
     // get website response for type and time
     Response* response = getsite(type, timestr);
-    char* parsed;
+    char* parsed = NULL;
     if (response->code < 400) {
         parsed = parse(response->data->data);
     } else {
